@@ -16,11 +16,11 @@ import cv2
 print("*")
 from keras.models import load_model
 print("*")
-annmodel = load_model(r'C:\Users\joshi\OneDrive\B Tech\Sem 5\ITE2010-Artificial Intelligence\J-component\results\ANN.h5')
+annmodel = load_model(r'C:\git\Breast-Cancer-Detection-Using-CNN\results\ANN.h5')
 print("*")
-base_cnnmodel = load_model(r'C:\Users\joshi\OneDrive\B Tech\Sem 5\ITE2010-Artificial Intelligence\J-component\results\base_CNN.h5')
+base_cnnmodel = load_model(r'C:\git\Breast-Cancer-Detection-Using-CNN\results\base_CNN.h5')
 print("*")
-final_cnnmodel = load_model(r'C:\Users\joshi\OneDrive\B Tech\Sem 5\ITE2010-Artificial Intelligence\J-component\results\final_CNN.h5')
+final_cnnmodel = load_model(r'C:\git\Breast-Cancer-Detection-Using-CNN\results\final_CNN.h5')
 print("*")
 print("The libraries and models are imported successfully.")
 sleep(4)
@@ -33,7 +33,7 @@ print("|"," "*30,"made by Jai, Arishti and Tushar"," "*33,"|")
 print("|"," "*(n-4),"|")
 print("*"*n)
 sleep(2)
-input("\n\nPress Enter to start.\n")
+input("\n\nPress any key to continue.\n")
     
 status = 1
 while(status!=2):
@@ -48,7 +48,7 @@ while(status!=2):
     sleep(1)
     
     #img_name = input("Enter image name: ")
-    #root_path = "C:\\Users\\joshi\\OneDrive\\B Tech\\Sem 5\\ITE2010-Artificial Intelligence\\J-component\\"
+    #root_path = "C:\\git\\Breast-Cancer-Detection-Using-CNN\\results"
     #img_path = root_path + img_name
     
     img = cv2.imread(img_path)
@@ -68,7 +68,7 @@ while(status!=2):
     while(opt=="1"):
         print("\nPress")
         sleep(0.25)
-        opt = input("1: View image again.\n2: Continue to detect Breast Cancer.\n3: Select a new image\n")
+        opt = input("1: View image again.\n2: Detect Breast Cancer.\n3: Select a new image\n")
         
         sleep(0.5)
         if opt == "1":
@@ -83,8 +83,8 @@ while(status!=2):
         
         
     if opt != "3":
-        sleep(2)    
-        print("Processing...\n")
+        sleep(1)    
+        print("\nProcessing...\n")
         sleep(4)
         img = cv2.resize(img, (50,50), interpolation=cv2.INTER_CUBIC)
         
@@ -99,7 +99,7 @@ while(status!=2):
         if label not in ["0","1"]:
             label = "unknown"
         input("Press Enter to view Results")
-        sleep(2)
+        sleep(1)
         print("\nHere are our predictions:")
         sleep(2)
         print('\nPredicted Value using ann model =',annpred)
