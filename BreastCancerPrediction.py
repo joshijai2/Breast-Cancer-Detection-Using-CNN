@@ -8,7 +8,7 @@ from tkinter.filedialog import askopenfilename
 
 from time import sleep
 
-import pandas as pd
+# import pandas as pd
 
 import numpy as np
 
@@ -30,7 +30,7 @@ print("*"*n)
 print("|"," "*(n-4),"|")
 print("|"," "*(n-4),"|")
 print("|"," "*(n//4),"Welcome to the Breast Cancer Detection Software", " "*(n//3+10),"|")
-print("|"," "*(n//4+5),"made by 18BIT0223, 18BIT0239 and 18BIT0292"," "*(n//3+21),"|")
+print("|"," "*(n//4+5),"made by 18BIT0223, 18BIT0239 and 18BIT0292"," "*(n//3+10),"|")
 print("|"," "*(n-4),"|")
 print("|"," "*(n-4),"|")
 print("*"*n)
@@ -83,16 +83,16 @@ while(status!=2):
     print("\nHere are our predictions:")
     sleep(1)
     print('\nPredicted Value using ann model =',annpred)
-    sleep(1)
+    sleep(0.75)
     
     print('\nPredicted Value using base cnn model =',base_cnnpred)
-    sleep(1)
+    sleep(0.5)
     
     print('\nPredicted Value using final cnn model =',final_cnnpred)
-    sleep(1)
+    sleep(0.25)
     
     print("\nTrue Value =",label)
-    sleep(1)
+    sleep(0.25)
     
     if label == "unknown":
         print("True value is unknown.")
